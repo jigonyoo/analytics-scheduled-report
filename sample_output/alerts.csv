@@ -1,0 +1,4 @@
+rule,kind,metric,group,period,measured_value,threshold_value,comparator,trailing_mean,trailing_stdev,z_score,message
+high_daily_purchase_volume,threshold,count,purchase,2024-01-15,949,700,gt,,,,high_daily_purchase_volume: count=949 for group=purchase period=2024-01-15 gt threshold 700
+high_weekly_purchase_volume,threshold,count,purchase,2024-01-15,2558,2200,gt,,,,high_weekly_purchase_volume: count=2558 for group=purchase period=2024-01-15 gt threshold 2200
+trailing_outlier_count,statistical_outlier,count,purchase,2024-01-15,949,,,273.71,66.14,10.21,"trailing_outlier_count: count=949 for group=purchase period=2024-01-15 vs trailing mean=273.71 stdev=66.14 (z=10.21, threshold=2.5)"

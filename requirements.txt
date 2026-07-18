@@ -1,0 +1,4 @@
+# No third-party dependencies. The pipeline, tests, and demo data generator
+# use only the Python 3 standard library (csv, json, datetime, statistics,
+# argparse, dataclasses, unittest, hashlib). This file exists so tooling
+# that expects a requirements.txt has one to find.

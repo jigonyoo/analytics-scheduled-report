@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  # Runs the demo pipeline: generates synthetic data, produces daily +
+  # weekly reports, writes sample_output/. No network access is required
+  # or granted -- network_mode: none proves the demo is self-contained.
+  analysis:
+    build: .
+    network_mode: none
+    volumes:
+      - ./sample_output:/app/sample_output
+      - ./data:/app/data
+    command: ["python3", "run_demo.py"]

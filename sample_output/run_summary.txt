@@ -1,0 +1,20 @@
+Scheduled Analytics Report - run summary
+=========================================
+Events ingested: 23246
+Date range covered: 2024-01-01 to 2024-02-11 (42 distinct days)
+Daily report window: 2024-01-15
+Weekly report window: 2024-01-15_to_2024-01-21
+Alerts fired (daily report): 2
+Alerts fired (weekly report): 1
+Alerts fired (total): 3
+
+Planted anomalies in the synthetic dataset (see data/generate_events.py):
+  - spike day: 2024-01-15
+  - drop day: 2024-01-29
+  - slow drift window: 2024-02-02 to 2024-02-11
+
+Output files:
+  - daily_report.md
+  - weekly_report.md
+  - alerts.csv
+  - run_summary.txt (this file)
