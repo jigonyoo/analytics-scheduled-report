@@ -1,10 +1,17 @@
-# Scheduled Analytics Reporting (sample #2)
+# Scheduled Analytics Reporting
 
-A code sample for a "Data Analytics" freelance offer. Sample #1 is a
-one-shot analytics pipeline; this one adds the **scheduling + alerting +
-delta** dimension: it turns a raw event/transaction log into a periodic
-(daily/weekly) report with metric aggregations, period-over-period deltas,
-threshold/statistical alert flags, and idempotent re-runs.
+Turns a raw event/transaction log into a periodic (daily/weekly) report:
+validated ingest, metric aggregations grouped by period and dimension
+(count, sum, average, distinct users), period-over-period deltas, and alert
+flags from two independent rule kinds -- fixed thresholds and trailing-window
+statistical outliers. Every alert carries the rule name, the metric, the
+group/period it applies to, and the measured value, never a bare
+"something's wrong." Re-runs are idempotent: schedule filtering is a pure
+function of `(events, window)`, no wall-clock timestamps or run IDs are
+embedded anywhere, and running the same window twice produces
+byte-identical files. It ships a deterministic synthetic six-week event log
+with three planted anomalies -- a spike day, a drop day, and a slow drift --
+so the alerting logic can be checked against known signal.
 
 This is a positioning sample from a data/automation engineer, not a claim
 of a production-grade analytics platform. Everything it reports is
