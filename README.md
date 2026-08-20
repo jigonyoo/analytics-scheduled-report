@@ -1,3 +1,5 @@
+[![CI](https://github.com/jigonyoo/analytics-scheduled-report/actions/workflows/ci.yml/badge.svg)](https://github.com/jigonyoo/analytics-scheduled-report/actions/workflows/ci.yml)
+
 # Scheduled Analytics Reporting
 
 Turns a raw event/transaction log into a periodic (daily/weekly) report:
